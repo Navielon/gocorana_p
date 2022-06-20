@@ -213,6 +213,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   color: #000;
+  letter-spacing: 0.14em;
 }
 
 .button {
@@ -254,10 +255,154 @@ body {
   display: none;
 }
 
+.get-started {
+  background-color: #FAFBFD;
+}
+
+.get-started__container {
+  padding: 10.1875rem 0.9375rem 3rem 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.get-started__container::before {
+  content: "";
+  position: absolute;
+  width: 100vh;
+  height: 100%;
+  right: 16.6875rem;
+  top: 0;
+  -webkit-transform: translate(100%, 0rem);
+      -ms-transform: translate(100%, 0rem);
+          transform: translate(100%, 0rem);
+  border-radius: 1.25rem 0 0 1.25rem;
+  background-color: #EC5863;
+}
+
+.get-started__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
+  padding: 0 1.25rem;
+}
+
+.get-started__block-text {
+  display: inline-block;
+  max-width: 25.625rem;
+}
+
+.get-started__video {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 3.75rem 0 0 1.25rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.get-started__image {
+  position: relative;
+  z-index: 5;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+.get-started__image img {
+  max-width: 100%;
+}
+
+.block-text__title {
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 126%;
+  color: #000;
+}
+
+.block-text__title:not(:last-child) {
+  margin: 0 0 0.75rem 0;
+}
+
+.block-text__title span {
+  color: #EC5863;
+}
+
+.block-text__title-blue span {
+  color: #4285F4;
+}
+
+.block-text__text {
+  line-height: 138.5%;
+  color: #616161;
+}
+
+.block-text__text:not(:last-child) {
+  margin: 0 0 1.5rem 0;
+}
+
+.video-get-started {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-get-started__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.75rem;
+          flex: 0 0 2.75rem;
+}
+
+.video-get-started__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 0 0 0.75rem;
+}
+
+.video-get-started__title {
+  color: #B0B0B0;
+  font-size: 0.8125rem;
+  line-height: 126%;
+  letter-spacing: 0.09375rem;
+}
+
+.video-get-started__title:not(:last-child) {
+  margin: 0 0 0.3125rem 0;
+}
+
+.video-get-started__text {
+  text-transform: uppercase;
+  font-size: 0.5625rem;
+  line-height: 126%;
+  letter-spacing: 0.125rem;
+  color: #000;
+}
+
 @media (max-width: 67.9375rem) {
   .header__container {
     max-width: 60.625rem;
     min-height: 7.75rem;
+  }
+
+  .get-started__container {
+    max-width: 60.625rem;
+    min-height: 7.75rem;
+    padding: 7.6875rem 0.9375rem 3rem 0.9375rem;
   }
 }
 
@@ -275,6 +420,15 @@ body {
 
   .menu {
     padding: 0rem 1.875rem 0rem 0rem;
+  }
+
+  .get-started__container {
+    max-width: 46.875rem;
+    min-height: 7.125rem;
+  }
+
+  .get-started__container::before {
+    right: 11.5625rem;
   }
 }
 
@@ -404,6 +558,52 @@ body {
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
   }
+
+  .get-started__container {
+    max-width: none;
+  }
+
+  .get-started__container::before {
+    display: none;
+  }
+
+  .get-started__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .get-started__block-text {
+    max-width: 25.625rem;
+  }
+
+  .get-started__video {
+    padding: 0;
+  }
+
+  .get-started__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    text-align: center;
+    padding: 1.875rem 0;
+  }
+
+  .block-text__title {
+    font-size: 2.375rem;
+  }
+
+  .video-get-started {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 36.74875rem) {
+  .get-started__block-text {
+    max-width: 23.125rem;
+  }
 }
 
 @media (max-width: 35.49875rem) {
@@ -413,11 +613,23 @@ body {
   }
 }
 
+@media (max-width: 23.24875rem) {
+  .block-text__title {
+    font-size: 2.0625rem;
+  }
+}
+
 @media (max-width: 22.49875rem) {
   .header__logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 2.5rem;
             flex: 0 0 2.5rem;
     overflow: hidden;
+  }
+}
+
+@media (max-width: 20.49875rem) {
+  .block-text__title {
+    font-size: 1.75rem;
   }
 }
